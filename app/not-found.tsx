@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import {ArrowRight} from 'lucide-react';
+export default function NotFound(){return <section className="section-pad pale-section" style={{minHeight:'65vh',display:'grid',alignItems:'center'}}><div className="container" style={{textAlign:'center'}}><div className="eyebrow" style={{justifyContent:'center'}}>PAGE NOT FOUND</div><h1 className="display-page">This space is still<br/><span className="accent-text">being imagined.</span></h1><p className="lead" style={{margin:'15px auto 30px'}}>We couldn't find that page. Discover our exhibition work or head back to the homepage.</p><Link href="/" className="btn btn-primary">Back to home <ArrowRight size={18}/></Link></div></section>}

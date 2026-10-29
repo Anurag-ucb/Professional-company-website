@@ -1,0 +1,5 @@
+import type {Metadata} from 'next';
+import {faqs} from '@/lib/data';
+import {PageHero,Accent,Eyebrow,CtaBanner} from '@/components/Ui';
+export const metadata:Metadata={title:'Frequently Asked Questions',description:'Common questions about exhibition stall design, in-house fabrication, pan-India service, agency partnerships and quotations.'};
+export default function FAQ(){return <><PageHero eyebrow="GOOD TO KNOW" title={<>Questions? <Accent>We have answers.</Accent></>} description="A useful starting point for planning an exhibition stand, understanding our process and working with the Adya team." sideLabel="FAQ"/><section className="section-pad pale-section"><div className="container"><div className="section-head center"><div><Eyebrow>FREQUENTLY ASKED QUESTIONS</Eyebrow><h2 className="display-2">Everything before <Accent>we begin.</Accent></h2></div></div><div className="faq-list">{faqs.map((f,i)=><details className="faq-item" key={f.q} open={i===0}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></div></section><CtaBanner title="Still have questions? We'd love to hear about your show."/></>}
